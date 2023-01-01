@@ -38,7 +38,8 @@ if len(sys.argv) == 2:
     elif command == "delete":
         key = input("Enter a key: ")
         if key in data:
-            data.pop(SAVED_DATA,key)
+            data.pop(key)
+            save_data(SAVED_DATA,data)
             print("Data deleted!")
         else:
             print("That key does not exist.")
